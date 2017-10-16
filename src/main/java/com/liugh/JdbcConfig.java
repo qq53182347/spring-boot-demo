@@ -12,6 +12,10 @@ import org.springframework.stereotype.Component;
 @PropertySources({@PropertySource("classpath:config/jdbc.properties"),@PropertySource("classpath:app.properties")})
 public class JdbcConfig {
 	
+	//配置可以为空,如果没有配置,再给9090
+	@Value("${tomcat.port:9090}")
+	private String tomcatPort;
+	
 	@Value("${jdbc.url}")
 	private String url;
 	
@@ -38,6 +42,8 @@ public class JdbcConfig {
 		
 		
 		System.out.println("appName..."+appName);
+		
+		System.out.println("tomcatPort..."+tomcatPort);
 	}
 }
 

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,6 +17,7 @@ import org.springframework.context.annotation.Configuration;
 //@ComponentScan
 @SpringBootApplication
 public class App2 {
+
 	
 	@Bean
 	public HashMap creatRun2(){
@@ -33,6 +35,8 @@ public class App2 {
 		
 		System.out.println(context.getEnvironment().getProperty("jdbc.password"));//注意yml文件中的空格,不对的话就获取不到
 		System.out.println(context.getEnvironment().getProperty("jdbc.userName"));
+		System.out.println(context.getEnvironment().getProperty("tomcat.port"));
+		
 		
 		
 		context.close();

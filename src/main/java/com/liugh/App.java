@@ -33,6 +33,7 @@ public class App{
     public static void main( String[] args ){
     	ConfigurableApplicationContext context = SpringApplication.run(App.class, args); 
     	System.out.println(context.getEnvironment().getProperty("local.port"));
+    	System.out.println(System.getProperty(""));
     	context.getBean(UserConfig.class).show();
 //    	((UserConfig) context.getBean("userConfig")).show();
     	
