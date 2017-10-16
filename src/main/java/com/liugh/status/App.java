@@ -1,4 +1,4 @@
-package com.liugh;
+package com.liugh.status;
 
 import java.util.HashSet;
 import java.util.List;

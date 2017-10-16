@@ -1,4 +1,4 @@
-package com.liugh;
+package com.liugh.status;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -25,6 +25,11 @@ public class App2 {
 	}
 	
 	public static void main(String[] args) {
+		
+		System.out.println(System.getProperty("java.version"));
+		System.out.println(System.getProperty("user.home"));
+		 System.out.println(System.getProperty("os.name"));
+		 
 		ConfigurableApplicationContext context = SpringApplication.run(App2.class, args);
 		System.out.println(context.getBean("creatRun2").toString());
 		

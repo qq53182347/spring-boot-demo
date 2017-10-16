@@ -1,4 +1,4 @@
-package com.liugh;
+package com.liugh.status;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
