@@ -34,7 +34,8 @@ public class App{
     	ConfigurableApplicationContext context = SpringApplication.run(App.class, args); 
     	System.out.println(context.getEnvironment().getProperty("local.port"));
     	context.getBean(UserConfig.class).show();
-//    	
+//    	((UserConfig) context.getBean("userConfig")).show();
+    	
 //    	new SpringApplicationBuilder()
 //        .sources(App.class)
 //        .child(App2.class)
