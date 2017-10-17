@@ -1,2 +1,23 @@
-jdbc :
-  password : 123456
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/order_food?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  jackson:
+    default-property-inclusion: non_null
+server:
+  servlet:
+    context-path: /sell
+  port: 8080
+#logging:
+ # pattern:
+  #  console: "%d - %d - %msg%n"
+  ##path: /var/log/tomcat/
+  #file: /var/log/tomcat/sell.log
+  #level:
+#  com.lizhiyu.sell.LoggerTest: debug

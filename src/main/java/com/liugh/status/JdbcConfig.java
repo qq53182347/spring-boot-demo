@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 public class JdbcConfig {
 	
 	//配置可以为空,如果没有配置,再给9090
-	@Value("${tomcat.port:9090}")
+	@Value("${tomcat.port:9091}")
 	private String tomcatPort;
 	
 	@Value("${jdbc.url}")
