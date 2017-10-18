@@ -1,7 +1,10 @@
 package com.liugh.eventListeners;
 
 import org.springframework.context.ApplicationListener;
+import org.springframework.stereotype.Component;
 
+
+@Component
 public class MyApplicationListener implements ApplicationListener<MyApplicationEvent> {
 
 	@Override
