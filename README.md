@@ -1,6 +1,4 @@
-##从头开始学习springboot 
-
-###springboot的配置 (未完待续)
+##从头开始学习spring-boot 
 
 	*1 Spring Boot 快速入门
 	

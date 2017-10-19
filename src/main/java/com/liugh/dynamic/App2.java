@@ -17,8 +17,8 @@ public class App2 {
 	
 	public static void main(String[] args) {
 		SpringApplication app  =new SpringApplication(App2.class);
-		app.setAdditionalProfiles("dev");
-		//app.setAdditionalProfiles("test");
+		//app.setAdditionalProfiles("dev");
+		app.setAdditionalProfiles("test");
 		ConfigurableApplicationContext context = app.run(args);
 		
 		System.out.println(context.getEnvironment().getProperty("jdbc_url"));
