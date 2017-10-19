@@ -11,22 +11,22 @@
 	<url>http://maven.apache.org</url>
 
 
-    <parent>
+   <!--  <parent>
 	    <groupId>org.springframework.boot</groupId>
 	    <artifactId>spring-boot-starter-parent</artifactId>
 	    <version>1.4.3.RELEASE</version>
-	</parent> 
-<!--   <dependencyManagement>
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-dependencies</artifactId>
-            <version>1.5.1.RELEASE</version>
-            <type>pom</type>
-            <scope>import</scope>
-        </dependency>
-    </dependencies>
-</dependencyManagement> -->
+	</parent>   -->
+	 <dependencyManagement>
+	    <dependencies>
+	        <dependency>
+	            <groupId>org.springframework.boot</groupId>
+	            <artifactId>spring-boot-dependencies</artifactId>
+	            <version>1.4.3.RELEASE</version>
+	            <type>pom</type>
+	            <scope>import</scope>
+	        </dependency>
+	    </dependencies>
+	</dependencyManagement> 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -34,21 +34,39 @@
 		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
-
- 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+ 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.tomcat</groupId>
+					<artifactId>tomcat-jdbc</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+<!-- 		<dependency>
+				<groupId>commons-dbcp</groupId>
+				<artifactId>commons-dbcp</artifactId>
+			</dependency> -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>1.0.25</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
 		</dependency>
+		
 	</dependencies>
 	
 	<build>

@@ -15,6 +15,7 @@ public class App {
 	public static void main(String[] args) {
 		SpringApplication sa  = new SpringApplication(App.class);
 		ConfigurableApplicationContext context = sa.run(args);
+		SpringApplication.run(App.class, args);
 		
 		context.getBean(MyEnvironmentPostProcessor.class);
 		System.out.println(context.getEnvironment().getProperty("name"));
@@ -22,9 +23,9 @@ public class App {
 		
 		String name = "liugh";
 		String password = "123456";
-//		logger.debug("debug...");
-//		logger.info("name = "+name+"  password="+password);
-//		logger.error("error...");
+		logger.debug("debug...");
+		logger.info("name = "+name+"  password="+password);
+		logger.error("error...");
 		context.close();
 	}
 
