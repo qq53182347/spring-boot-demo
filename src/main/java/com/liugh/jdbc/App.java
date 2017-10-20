@@ -29,7 +29,7 @@ public class App {
 		System.out.println("---自定义数据源----");
         DataSource createDataSource = context.getBean(DruidDBConfiguration.class).createDataSource();
         System.out.println(createDataSource.getClass());
-        context.getBean(UserDao.class).upcateUser();
+        context.getBean(UserDao.class).updateUser();
         
 		
 	}

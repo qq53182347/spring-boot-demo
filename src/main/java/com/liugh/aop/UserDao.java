@@ -1,4 +1,4 @@
-package com.liugh.jdbc;
+package com.liugh.aop;
 
 import java.util.List;
 import java.util.Map;
@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 @Repository
+@Transactional
 public class UserDao {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
@@ -19,12 +20,10 @@ public class UserDao {
 		System.out.println(queryForList.toString());
 	}
 	
-	@Transactional(rollbackFor=Exception.class)
-//	@Transactional(noRollbackFor=Exception.class)
 	public void updateUser(){
-		String sql="update  ly_user set userName = 'liugh4' where id = '1'";
+		String sql="update  ly_user set userName = 'liugh' where id = '1'";
+		System.out.println("update...");
 		jdbcTemplate.update(sql);
-//		throw new NullPointerException();
 	}
 
 }
