@@ -1,5 +1,8 @@
 package com.liugh.aop;
 
+import java.util.Arrays;
+
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -17,8 +20,8 @@ public class LogAspect {
 	
 	
 	@After("execution(* com.liugh.aop..*.*(..) )")
-	public void   afterLog(){
-		System.out.println("after log....");
+	public void   afterLog(JoinPoint  point){
+		System.out.println("after log....目标类:"+point.getTarget().getClass()+"   参数:"+Arrays.asList(point.getArgs()));
 	}
 
 }

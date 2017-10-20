@@ -1,8 +1,10 @@
 package com.liugh.aop;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
+import org.aspectj.lang.JoinPoint;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -20,8 +22,8 @@ public class UserDao {
 		System.out.println(queryForList.toString());
 	}
 	
-	public void updateUser(){
-		String sql="update  ly_user set userName = 'liugh' where id = '1'";
+	public void updateUser(String username){
+		String sql="update  ly_user set userName = '"+username+"' where id = '1'";
 		System.out.println("update...");
 		jdbcTemplate.update(sql);
 	}
